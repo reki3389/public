@@ -6,9 +6,9 @@ package Hello;
 public class Exercise4I3 {
 	public static void main(String[] args) {
 		int a = 0;
-		for(int i=1; i<=100; i++) {
-			if(i%3==0) //i를 3으로 나눈 값이 0으로 떨어지는 수를 찾는다.
+		for(int i=0; i<=100; i+=3) {
+			//if(i%3==0) //i를 3으로 나눈 값이 0으로 떨어지는 수를 찾는다.
 				a+=i; } //a는 0이므로 i의 값이 100까지 카운트 될동안 3으로 나눈값이 0으로 떨어지는 숫자를 체크해서 += 대입연산자를 이용하여 총 값을 구한다.
-				System.out.println("3의 배수의 합:" + a); //그래서 3의 배수의 합은 a로 나온다.
+				System.out.println(a); //그래서 3의 배수의 합은 a로 나온다.
 		}
 	}
