@@ -33,6 +33,7 @@ public class Exercise4I7 {
 			}
 		}
 		System.out.println("프로그램 종료"); // 4번을 입력시 연산은 종료되고 최종적인 출력값 프로그램 종료라는 글을 내놓는다.
+		scanner.close();
 	}
 	
 }
