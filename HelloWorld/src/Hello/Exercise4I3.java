@@ -1,14 +1,17 @@
-// 1¹ø¹®Á¦ Á¶°Ç¹® (if¹®, switch¹®), ¹İ¸ñ¹® (for¹®, while¹®, do-while¹®)
-// 2¹ø¹®Á¦  2¹ø switch¹®¿¡¼­ »ç¿ëÇÒ ¼ö ÀÖ´Â º¯¼öÀÇ Å¸ÀÔÀº int, doubleÀÌ µÉ ¼ö ÀÖ´Ù. X doubleÀº ½Ç¼ö Å¸ÀÔÀÌ¹Ç·Î switch¹®¿¡¼­ »ç¿ë ºÒ°¡
-
 package Hello;
 
-public class Exercise4I3 {
+public class Exercise3I8 {
 	public static void main(String[] args) {
-		int a = 0;
-		for(int i=0; i<=100; i+=3) {
-			//if(i%3==0) //i¸¦ 3À¸·Î ³ª´« °ªÀÌ 0À¸·Î ¶³¾îÁö´Â ¼ö¸¦ Ã£´Â´Ù.
-				a+=i; } //a´Â 0ÀÌ¹Ç·Î iÀÇ °ªÀÌ 100±îÁö Ä«¿îÆ® µÉµ¿¾È 3À¸·Î ³ª´«°ªÀÌ 0À¸·Î ¶³¾îÁö´Â ¼ıÀÚ¸¦ Ã¼Å©ÇØ¼­ += ´ëÀÔ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© ÃÑ °ªÀ» ±¸ÇÑ´Ù.
-				System.out.println(a); //±×·¡¼­ 3ÀÇ ¹è¼öÀÇ ÇÕÀº a·Î ³ª¿Â´Ù.
-		}
+		double x = 5.0;
+		double y = 0.0;
+		
+		double z = x % y;
+		
+		if (Double.isNaN(z)) { // NaN ê²€ì‚¬ ë©”ì†Œë“œë¥¼ í†µí•´ ê°’ì´ NaNì´ë©´ trueë¥¼ í‘œì‹œí•˜ê³  
+			System.out.println("0.0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); // ê·¸ì— ë”°ë¼ ì¶œë ¥ê°’ì€ ì°¸ì˜ ì¶œë ¥ê°’ì„ í‘œì‹œ í•œë‹¤.
+		} else {
+			double result = z + 10;
+			System.out.println("ê²°ê³¼: " + result);
 	}
+}
+}

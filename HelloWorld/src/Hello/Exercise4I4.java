@@ -2,14 +2,14 @@ package Hello;
 
 public class Exercise4I4 {
 	public static void main(String[] args) {
-		int sum = 0; // sum °ªÀ» ¸ÇÃ³À½ 0À¸·Î ÁÖ°í
-		while (true) { // while¹®À» ÅëÇØ ÂüÀÇ °ªÀ» »ÌÀ¸·Á°í ÇÒ¶§
-		int num1 = (int) (Math.random()*6) +1; //num1ÀÇ ÁÖ»çÀ§ÀÇ ·£´ı ¼ıÀÚ¸¦ »Ì¾Æ 
-		int num2 = (int) (Math.random()*6) +1; //num2ÀÇ ÁÖ»çÀ§ÀÇ ·£´ı ¼ıÀÚ¸¦ »Ì¾Æ
-		System.out.println("(" + num1 + "," + num2 + ")"); // µÎ ÁÖ»çÀ§ÀÇ ·£´ı ¼ıÀÚ¸¦ »Ì´Â´Ù.
-		sum = num1 + num2; // ±×¸®°í µÎ ¼ıÀÚ¸¦ ´õÇØ¼­
-		if (sum == 5) { // ÇÕ°è°¡ 5°¡ µÇ¸é 
-			break; // ºê·¹ÀÌÅ©¹®À» »ç¿ëÇØ¼­ ÁßÁö
+		int sum = 0; // sum ê°’ì„ ë§¨ì²˜ìŒ 0ìœ¼ë¡œ ì£¼ê³ 
+		while (true) { // whileë¬¸ì„ í†µí•´ ì°¸ì˜ ê°’ì„ ë½‘ìœ¼ë ¤ê³  í• ë•Œ
+		int num1 = (int) (Math.random()*6) +1; //num1ì˜ ì£¼ì‚¬ìœ„ì˜ ëœë¤ ìˆ«ìë¥¼ ë½‘ì•„ 
+		int num2 = (int) (Math.random()*6) +1; //num2ì˜ ì£¼ì‚¬ìœ„ì˜ ëœë¤ ìˆ«ìë¥¼ ë½‘ì•„
+		System.out.println("(" + num1 + "," + num2 + ")"); // ë‘ ì£¼ì‚¬ìœ„ì˜ ëœë¤ ìˆ«ìë¥¼ ë½‘ëŠ”ë‹¤.
+		sum = num1 + num2; // ê·¸ë¦¬ê³  ë‘ ìˆ«ìë¥¼ ë”í•´ì„œ
+		if (sum == 5) { // í•©ê³„ê°€ 5ê°€ ë˜ë©´ 
+			break; // ë¸Œë ˆì´í¬ë¬¸ì„ ì‚¬ìš©í•´ì„œ ì¤‘ì§€
 						}
 				}
 		}
