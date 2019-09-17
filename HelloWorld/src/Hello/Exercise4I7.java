@@ -29,7 +29,6 @@ public class Exercise4I7 {
 				System.out.println("잔고>"+balance); // 현재 밸런스를 표시해준다.
 			} else if(a == 4) { // 4번을 통해 run = false라는 값을 통해 연산을 종료한다.
 			  run = false; 
-			  break;
 			}
 		}
 		System.out.println("프로그램 종료"); // 4번을 입력시 연산은 종료되고 최종적인 출력값 프로그램 종료라는 글을 내놓는다.
