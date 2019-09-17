@@ -5,7 +5,7 @@ public class Exercise3I6 {
 		int lengthTop = 5;
 		int lengthBottom = 10;
 		int height = 7;
-		double area = ((lengthTop + lengthBottom)*height/2); // ---- »ç´Ù¸®²Ã ³ĞÀÌÀÇ °ø½ÄÀº (À­º¯ + ¾Æ·§º¯) x ³ôÀÌ / 2
+		double area = ((lengthTop + lengthBottom)*height/2); // ---- ì‚¬ë‹¤ë¦¬ê¼´ ë„“ì´ì˜ ê³µì‹ì€ (ìœ—ë³€ + ì•„ë«ë³€) x ë†’ì´ / 2
 		System.out.println(area);
 	}
 }

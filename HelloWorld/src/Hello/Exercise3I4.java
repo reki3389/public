@@ -1,3 +1,4 @@
+  
 package Hello;
 
 public class Exercise3I4 {
@@ -5,12 +6,12 @@ public class Exercise3I4 {
 		int pencils = 534;
 		int students = 30;
 		
-		//ÇĞ»ı ÇÑ ¸íÀÌ °¡Áö´Â ¿¬ÇÊ ¼ö
-		int pencilsPerStudent = (pencils / students); // ---- ÇĞ»ıÇÑ¸íÀÌ °¡Áö´Â ¿¬ÇÊ ±¸ÇÏ´Â Ãâ·ÂÀº ¿¬ÇÊ ³ª´©±â ÇĞ»ı
+		//í•™ìƒ í•œ ëª…ì´ ê°€ì§€ëŠ” ì—°í•„ ìˆ˜
+		int pencilsPerStudent = (pencils / students); // ---- í•™ìƒí•œëª…ì´ ê°€ì§€ëŠ” ì—°í•„ êµ¬í•˜ëŠ” ì¶œë ¥ì€ ì—°í•„ ë‚˜ëˆ„ê¸° í•™ìƒ
 		System.out.println(pencilsPerStudent);
 		
-		//³²Àº ¿¬ÇÊ ¼ö
-		int pencilsLeft = (pencils % students); // ---- ³²Àº ¿¬ÇÊ¼ö´Â »ê¼ú¿¬»èÀÚ %·Î ¿¬ÇÊÀ» ÇĞ»ıÀ¸·Î ³ª´« ´ÙÀ½ ³²Àº ¼ö 
+		//ë‚¨ì€ ì—°í•„ ìˆ˜
+		int pencilsLeft = (pencils % students); // ---- ë‚¨ì€ ì—°í•„ìˆ˜ëŠ” ì‚°ìˆ ì—°ì‚­ì %ë¡œ ì—°í•„ì„ í•™ìƒìœ¼ë¡œ ë‚˜ëˆˆ ë‹¤ìŒ ë‚¨ì€ ìˆ˜ 
 		System.out.println(pencilsLeft);
 	}
 }

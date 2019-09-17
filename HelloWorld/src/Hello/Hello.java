@@ -18,5 +18,4 @@ public class Hello {
 		else
 		System.out.println("no");
 	}
-	
 }

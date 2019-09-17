@@ -1,37 +1,38 @@
 package Hello;
 
-import java.util.Scanner; // ½ºÄ³³Ê ÇÔ¼ö¸¦ ÁöÁ¤ÇØÁØ´Ù.
+import java.util.Scanner; // ìŠ¤ìºë„ˆ í•¨ìˆ˜ë¥¼ ì§€ì •í•´ì¤€ë‹¤.
 public class Exercise4I7 {
 	public static void main(String[] args) {
-		boolean run = true; // ÂüÀÇ °æ¿ì¿¡¼­ °è¼Ó Ãâ·ÂÀÌ µÇ°Ô²û ÇÑ´Ù.
+		boolean run = true; // ì°¸ì˜ ê²½ìš°ì—ì„œ ê³„ì† ì¶œë ¥ì´ ë˜ê²Œë” í•œë‹¤.
 		
-		int balance = 0; // ÃÑ ÀÜ°í¸¦ ¼±¾ð ÇØÁØ´Ù.
+		int balance = 0; // ì´ ìž”ê³ ë¥¼ ì„ ì–¸ í•´ì¤€ë‹¤.
 		
-		Scanner input = new Scanner(System.in); //½ºÄ³³Ê ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© ÀÎÇ²À» ³Ö¾îÁÖ´Â ÇÔ¼ö¸¦ ÀÛ¼ºÇÑ´Ù. 
+		Scanner scanner = new Scanner(System.in); //ìŠ¤ìºë„ˆ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì¸í’‹ì„ ë„£ì–´ì£¼ëŠ” í•¨ìˆ˜ë¥¼ ìž‘ì„±í•œë‹¤. 
 		
-		while(run) { //while ¹®À» ÅëÇØ ¹ØÀÇ Ãâ·Â¹®µéÀ» Ãâ·ÂÇØÁØ´Ù.
+		while(run) { //while ë¬¸ì„ í†µí•´ ë°‘ì˜ ì¶œë ¥ë¬¸ë“¤ì„ ì¶œë ¥í•´ì¤€ë‹¤.
 			System.out.println("---------------------------");
-			System.out.println("1.¿¹±Ý | 2.Ãâ±Ý | 3.ÀÜ°í | 4.Á¾·á");
+			System.out.println("1.ì˜ˆê¸ˆ | 2.ì¶œê¸ˆ | 3.ìž”ê³  | 4.ì¢…ë£Œ");
 			System.out.println("---------------------------");
-			System.out.print("¼±ÅÃ> ");
+			System.out.print("ì„ íƒ> ");
 			
-			int a = input.nextInt(); // ÀÎÆ® aÀÇ °ªÀº ÀÎÇ² °ªÀ» ÃøÁ¤ÇÑ´Ù.
+			int a = scanner.nextInt(); // ì¸íŠ¸ aì˜ ê°’ì€ ì¸í’‹ ê°’ì„ ì¸¡ì •í•œë‹¤.
 			
-			if(a == 1) { // if¹®À¸·Î a´Â 1°ú °°´Ù´Â ¼±¾ðÀ» ÇØÁÖ¸é 1À» ³Ö¾úÀ»¶§ ¹ØÀÇ Ãâ·Â¹®ÀÌ ³ª¿À°í  ¿¹±Ý¾×ÀÌ Ãâ·ÂµÈ´Ù.
-				System.out.print("¿¹±Ý¾×> "); 
-				balance += input.nextInt();// Ãâ·ÂµÈ ¿¹±Ý¾×ÀÇ ±Ý¾×À» ´ëÀÔ¿¬»êÀÚ += ¸¦ ÅëÇØ ¹ë·±½º¿¡ ±Ý¾×À» Áõ°¡ÇØÁØ´Ù.
-				System.out.println("ÀÜ¾×> " + balance);
-			} else if(a == 2) { // 2¸¦ a¿Í °°´Ù´Â ¼±¾ðÀ» ÅëÇØ 2¸¦ ÀÔ·ÂÇÏ¸é
-				System.out.print("Ãâ±Ý¾×> "); // Ãâ±Ý¾×ÀÌ ³ª¿À°í 
-				balance -= input.nextInt(); // ¹ë·±½º¿¡ ÀÖ´Â ¼ýÀÚ¸¦ ÀÎÇ²¹ÞÀº ¼ýÀÚ¸¦ -= ´ëÀÔ¿¬»êÀÚ¸¦ ÅëÇØ ±Ý¾×À» °¡°¨ÇØÁØ´Ù.
-				System.out.println("ÀÜ¾×> " + balance);
-			} else if(a == 3) { // 3À» a¿Í °°´Ù´Â ¼±¾ðÀ» ÅëÇØ 3À» ÀÔ·ÂÇÏ¸é
-				System.out.println("ÀÜ°í>"+balance); // ÇöÀç ¹ë·±½º¸¦ Ç¥½ÃÇØÁØ´Ù.
-			} else if(a == 4) { // 4¹øÀ» ÅëÇØ run = false¶ó´Â °ªÀ» ÅëÇØ ¿¬»êÀ» Á¾·áÇÑ´Ù.
+			if(a == 1) { // ifë¬¸ìœ¼ë¡œ aëŠ” 1ê³¼ ê°™ë‹¤ëŠ” ì„ ì–¸ì„ í•´ì£¼ë©´ 1ì„ ë„£ì—ˆì„ë•Œ ë°‘ì˜ ì¶œë ¥ë¬¸ì´ ë‚˜ì˜¤ê³   ì˜ˆê¸ˆì•¡ì´ ì¶œë ¥ëœë‹¤.
+				System.out.print("ì˜ˆê¸ˆì•¡> "); 
+				balance += scanner.nextInt();// ì¶œë ¥ëœ ì˜ˆê¸ˆì•¡ì˜ ê¸ˆì•¡ì„ ëŒ€ìž…ì—°ì‚°ìž += ë¥¼ í†µí•´ ë°¸ëŸ°ìŠ¤ì— ê¸ˆì•¡ì„ ì¦ê°€í•´ì¤€ë‹¤.
+				System.out.println("ìž”ì•¡> " + balance);
+			} else if(a == 2) { // 2ë¥¼ aì™€ ê°™ë‹¤ëŠ” ì„ ì–¸ì„ í†µí•´ 2ë¥¼ ìž…ë ¥í•˜ë©´
+				System.out.print("ì¶œê¸ˆì•¡> "); // ì¶œê¸ˆì•¡ì´ ë‚˜ì˜¤ê³  
+				balance -= scanner.nextInt(); // ë°¸ëŸ°ìŠ¤ì— ìžˆëŠ” ìˆ«ìžë¥¼ ì¸í’‹ë°›ì€ ìˆ«ìžë¥¼ -= ëŒ€ìž…ì—°ì‚°ìžë¥¼ í†µí•´ ê¸ˆì•¡ì„ ê°€ê°í•´ì¤€ë‹¤.
+				System.out.println("ìž”ì•¡> " + balance);
+			} else if(a == 3) { // 3ì„ aì™€ ê°™ë‹¤ëŠ” ì„ ì–¸ì„ í†µí•´ 3ì„ ìž…ë ¥í•˜ë©´
+				System.out.println("ìž”ê³ >"+balance); // í˜„ìž¬ ë°¸ëŸ°ìŠ¤ë¥¼ í‘œì‹œí•´ì¤€ë‹¤.
+			} else if(a == 4) { // 4ë²ˆì„ í†µí•´ run = falseë¼ëŠ” ê°’ì„ í†µí•´ ì—°ì‚°ì„ ì¢…ë£Œí•œë‹¤.
 			  run = false; 
 			}
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á"); // 4¹øÀ» ÀÔ·Â½Ã ¿¬»êÀº Á¾·áµÇ°í ÃÖÁ¾ÀûÀÎ Ãâ·Â°ª ÇÁ·Î±×·¥ Á¾·á¶ó´Â ±ÛÀ» ³»³õ´Â´Ù.
+		System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ"); // 4ë²ˆì„ ìž…ë ¥ì‹œ ì—°ì‚°ì€ ì¢…ë£Œë˜ê³  ìµœì¢…ì ì¸ ì¶œë ¥ê°’ í”„ë¡œê·¸ëž¨ ì¢…ë£Œë¼ëŠ” ê¸€ì„ ë‚´ë†“ëŠ”ë‹¤.
+		scanner.close();
 	}
 	
 }
