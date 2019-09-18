@@ -2,7 +2,7 @@ package Hello;
 
 import java.util.Scanner;
 
-public class Exercise5I9 {
+public class MethodExample2 {
 	public static void main(String[] args) {
 		boolean run = true;
 		int studentnum = 0;
@@ -10,11 +10,8 @@ public class Exercise5I9 {
 		Scanner scanner = new Scanner(System.in);
 		
 		while(run) {
-			System.out.println("-----------------------------------------");
-			System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
-			System.out.println("-----------------------------------------");
-			System.out.print("선택> ");
-			
+			menu1();
+
 			int selectno = scanner.nextInt();
 			
 			if(selectno == 1) {
@@ -23,10 +20,8 @@ public class Exercise5I9 {
 				scores = new int[studentnum];
 				System.out.println("학생수 : "+ studentnum);
 			} else if(selectno == 2) {
-				for(int i = 0; i<studentnum; i++) {
-					System.out.print("score["+i+"]:");
-					scores[i] = scanner.nextInt();
-					}
+				scores = menu2(scores);
+				
 			} else if(selectno == 3) {
 				for(int i = 0; i<studentnum; i++) {
 				System.out.println("score["+i+"]:"+scores[i]);
@@ -48,6 +43,26 @@ public class Exercise5I9 {
 			}
 		}
 		System.out.println("프로그램 종료");
+}
+
+	public static void menu1() {
+		System.out.println("-----------------------------------------");
+		System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
+		System.out.println("-----------------------------------------");
+		System.out.print("선택> ");
 	}
 	
+	public static int[] menu2(int[] ary) {
+		Scanner scanner = new Scanner(System.in);
+		int[] copyAry = new int[ary.length];
+		for(int i = 0; i<ary.length; i++) {
+			System.out.print("score["+i+"]:");
+			ary[i] = scanner.nextInt();
+	}
+	return copyAry;
+
+
+
 }
+	}
+
