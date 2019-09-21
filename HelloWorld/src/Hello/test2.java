@@ -14,7 +14,7 @@ public class test2 {
 
 		for (int i = 0; i < money.length; i++) {
 			result[i] = push / money[i];
-			push = push%money[i];
+			push %= money[i];
 			System.out.println(money[i]+"원 갯수 = "+result[i]);
 			}
 		}
