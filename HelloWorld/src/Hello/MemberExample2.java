@@ -2,7 +2,7 @@ package Hello;
 
 import java.util.Scanner;
 
-public class MemberExample {
+public class MemberExample2 {
 	private static Member[] idlist = new Member[100];
 	private static Scanner sc = new Scanner(System.in);
 
@@ -61,22 +61,34 @@ public class MemberExample {
 		String id = sc.nextLine();
 		System.out.print("password 입력: ");
 		String password = sc.nextLine();
-
+		boolean isid = false, ispassword = false;
+		String name = null;
+		int age = 0;
 		for (Member idtool : idlist) {
-			if (idtool != null) {
-				if (idtool.getId().equals(id) && idtool.getPassword().equals(password)) {
-					System.out.println("이름 : " + idtool.getName() + ", 나이 : " + idtool.getAge());
+			if (idtool != null && idtool.getId().equals(id)) {
+				if (idtool.getPassword().equals(password)) {
+					isid = true;
+					ispassword = true;
+					age = idtool.getAge();
+					name = idtool.getName();
 					break;
-
-				} else if (idtool.getId().equals(id) && !idtool.getPassword().equals(password)) {
-					System.out.println("패스워드가 틀립니다.");
+				} else {
+					isid = true;
+					ispassword = false;
 					break;
-
-				} else if (!idtool.getId().equals(id) && !idtool.getPassword().equals(password)) {
-					System.out.println("존재하는 아이디가 아닙니다.");
-
 				}
+			} else {
+				isid = false;
+				ispassword = false;
+				
 			}
+		}
+		if (isid == true && ispassword == true) {
+			System.out.println("이름 : " + name + ", 나이 : " + age);
+		} else if (isid == true && ispassword == false) {
+			System.out.println("패스워드가 틀립니다.");
+		} else if (isid == false && ispassword == false) {
+			System.out.println("존재하지 않는 아이디 입니다.");
 		}
 	}
 }

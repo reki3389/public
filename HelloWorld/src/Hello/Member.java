@@ -5,22 +5,12 @@ class Member {
 	private String id;
 	private String password;
 	private int age;
-
-	Member() {
-		
-	}
-	
-	Member(String name, String id) {
-		this.name = name;
-		this.id = id;
-	}
 	
 	Member(String name, String id, String password, int age) {
 		this.name = name;
 		this.id = id;
 		this.password = password;
 		this.age = age;
-		
 	}
 	
 	public String getName() {
@@ -54,6 +44,5 @@ class Member {
 	public void setAge(int age) {
 		this.age = age;
 	}
-
 }
 
