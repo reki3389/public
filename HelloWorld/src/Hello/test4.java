@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class test4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		int n = sc.nextInt();
+		int n = 0;
 		int[] a = new int[n];
-		long sum = 0;
-		for(long i = 0; i <= a.length; i++) {
-			sum += (long) i;
-			
-		}System.out.println(sum);
-		
+		int sum = 0;
+		for (int i = 0; i <= a.length; i++) {
+			sum += i;
+
+		}
+		System.out.println(sum);
 	}
 }
