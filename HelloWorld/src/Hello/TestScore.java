@@ -98,7 +98,7 @@ public class TestScore {
 
 			ac = ab / count;
 		}
-		System.out.println("평균 : " + ac);
+		System.out.println("학생 총합 : " + ab + "학생 총 평균 : " + ac);
 	}
 
 	public static void getallavglist() {
