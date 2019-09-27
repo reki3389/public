@@ -106,7 +106,6 @@ public class TestScore {
 		int count = 0;
 			for (int i = 0 ; i < stuAry.length; i++) {
 				if (stuAry[i] != null) {
-					System.out.println("학생 " + stuAry[i].getStunum());
 					sumAry[i] = new student();
 					sumAry[i].setStunum(stuAry[i].getStunum());
 					sumAry[i].setName(stuAry[i].getName());
