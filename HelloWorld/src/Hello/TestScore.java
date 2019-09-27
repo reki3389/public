@@ -128,7 +128,7 @@ public class TestScore {
 		}
 		for (student s : sumAry) {
 			if (s != null)
-				System.out.println(s.getStunum() + " / " + s.getName() + " / " + s.getKorean());
+				System.out.println("학생번호 : " + s.getStunum() + " / " +"학생이름 : " + s.getName() + " / " + "학새총점: " + s.getKorean());
 		}
 		System.out.println();
 	}
