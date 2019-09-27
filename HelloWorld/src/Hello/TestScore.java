@@ -104,33 +104,32 @@ public class TestScore {
 	public static void getallavglist() {
 		student[] sumAry = new student[100];
 		int count = 0;
-		for (int i = 0; i < stuAry.length; i++) {
-			for (int y = i + 1; y < stuAry.length; y++) {
+			for (int i = 0 ; i < stuAry.length; i++) {
 				if (stuAry[i] != null) {
 					System.out.println("학생 " + stuAry[i].getStunum());
 					sumAry[i] = new student();
 					sumAry[i].setStunum(stuAry[i].getStunum());
 					sumAry[i].setName(stuAry[i].getName());
-					sumAry[i].setKorean(stuAry[i].getEnglish()+stuAry[i].getKorean()+stuAry[i].getMath());
-					
+					sumAry[i].setKorean(stuAry[i].getEnglish() + stuAry[i].getKorean() + stuAry[i].getMath());
+
 					count++;
 				}
 			}
-			count--;
-			for(int y = 0; y < count; y++) {
-				for(int c = 0; c< count; c++) {
-					student student = null;
-					if(sumAry[i].getKorean() > sumAry[i + 1].getKorean()) {
-						student = sumAry[i];
-						sumAry[i] = sumAry[i * 1];
-						sumAry[i + 1] = student;
-					}
+
+		count--;
+		for (int y = 0; y < count; y++) {
+			for (int c = 0; c < count; c++) {
+				student student = null;
+				if (sumAry[c].getKorean() > sumAry[c + 1].getKorean()) {
+					student = sumAry[c];
+					sumAry[c] = sumAry[c+1];
+					sumAry[c +1] = student;
 				}
 			}
-			for (student s : sumAry) {
-				if(s != null)
-					System.out.println(s.getStunum() + " / " + s.getName() + " / " + s.getKorean());
-			}
+		}
+		for (student s : sumAry) {
+			if (s != null)
+				System.out.println(s.getStunum() + " / " + s.getName() + " / " + s.getKorean());
 		}
 		System.out.println();
 	}

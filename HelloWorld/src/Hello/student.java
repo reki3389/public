@@ -8,6 +8,7 @@ public class student {
 	int math;
 	int sum;
 	int avg;
+	
 	public student() {
 		
 	}
