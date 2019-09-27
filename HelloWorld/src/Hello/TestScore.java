@@ -89,16 +89,18 @@ public class TestScore {
 		System.out.println("전체 점수 ");
 		int ab = 0;
 		int ac = 0;
+		int ad = 0;
 		int count = 0;
 		for (int i = 0; i < stuAry.length; i++) {
 			if (stuAry[i] != null) {
+				ad += stuAry[i].getSum();
 				ab += stuAry[i].getAvg();
 				count++;
 			}
 
 			ac = ab / count;
 		}
-		System.out.println("학생 총합 : " + ab + " / 학생 총 평균 : " + ac);
+		System.out.println("학생 총합 : " + ad + " / 학생 총 평균 : " + ac);
 	}
 
 	public static void getallavglist() {
