@@ -4,7 +4,7 @@ import com.board.model.Board;
 import com.board.model.BoardService;
 
 
-public class BoardServiceImpl2 implements BoardService {
+public abstract class BoardServiceImpl2 implements BoardService {
 
 	@Override
 	public void writeBoard(Board board, Board[] boards) {

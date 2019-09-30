@@ -16,7 +16,13 @@ public class BoardProc {
 		while (true) {
 			System.out.println("메뉴선택하세요.");
 			System.out.println("1.작성 2.단건조회 3.전체조회 4.변경 9.종료");
-			int menu = sc.nextInt();
+			int menu = 0;
+			try {
+				menu = sc.nextInt();
+				sc.hasNextLine();
+			} catch (Exception e) {
+				System.out.println("정상적인 메뉴를 선택해주세요.");
+			}
 			sc.nextLine();
 			if (menu == 1) {
 				writeBoard();
@@ -37,7 +43,14 @@ public class BoardProc {
 	public void writeBoard() {
 		System.out.println("글작성.");
 		System.out.println("게시글번호입력:");
-		int boardNo = sc.nextInt();
+		int boardNo = 0;
+		try {
+			boardNo = sc.nextInt();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 게시글 번호를 입력하세요.");
+			sc.hasNextLine();
+		}
 		sc.nextLine();
 		System.out.println("제목을 입력하세요.");
 		String title = sc.nextLine();
@@ -53,7 +66,15 @@ public class BoardProc {
 	public void getBoard() {
 		System.out.println("한건조회.");
 		System.out.println("조회할 번호를 입력:");
-		int boardNo = sc.nextInt();
+		int boardNo = 0;
+		try {
+			boardNo = sc.nextInt();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 조회 번호를 입력하세요.");
+			sc.hasNextLine();
+		}
+		sc.nextLine();
 		Board board = service.getBoard(boardNo, boardAry);
 		System.out.println(board);
 
@@ -71,21 +92,56 @@ public class BoardProc {
 
 	public void updateBoard() {
 		System.out.println("수정할 글 번호: ");
-		int boardNo = sc.nextInt();
+		int boardNo = 0;
+		try {
+			boardNo = sc.nextInt();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 수정글 번호를 입력하세요.");
+			sc.hasNextLine();
+		}
+		sc.nextLine();
 		System.out.println("변경할 제목: ");
-		String title = sc.next();
+		String title = null;
+		try {
+			title = sc.nextLine();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 변경할 제목을 입력하세요.");
+		}
+		sc.nextLine();
 		System.out.println("변경할 내용: ");
-		String content = sc.next();
+		String content = null;
+		try {
+			content = sc.nextLine();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 변경 내용을 작성하세요.");
+		}
+		sc.nextLine();
 		System.out.println("변경할 이름: ");
-		String writer = sc.next();
-
+		String writer = null;
+		try {
+			writer = sc.nextLine();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 변경할 이름을 입력하세요.");
+		}
+		sc.nextLine();
 		Board board1 = new Board(boardNo, title, content, writer);
 		service.updateBoard(board1, boardAry);
 	}
 
 	public void getBoardDelete() {
 		System.out.println("몇번 글을 삭제 합니까?");
-		int boardNo = sc.nextInt();
+		int boardNo = 0;
+		try {
+			boardNo = sc.nextInt();
+			sc.hasNextLine();
+		} catch (Exception e) {
+			System.out.println("정확한 삭제 글 번호를 입력하세요.");
+		}
+		sc.nextLine();
 		service.getBoardDelete(boardNo, boardAry);
 
 	}
