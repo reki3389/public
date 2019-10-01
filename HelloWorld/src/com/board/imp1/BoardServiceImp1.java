@@ -44,15 +44,18 @@ public class BoardServiceImp1 implements BoardService {
 		for (int i = 0; i < boards.length; i++) {
 			if (boards[i] != null && boards[i].getBoardNo() == board.getBoardNo()) {
 				boards[i].setContents(board.getContents());
-				boards[i].setTitle(board.getTitle());
-				boards[i].setWriter(board.getWriter());
-
 			}
 		}
+
 	}
 
 	@Override
-	public void getBoardDelete(int boardNo, Board[] boards) {
+	public void getBoardDelete(int boardNo, Board[] boardAry) {
+		
+	}
+
+	@Override
+	public void deleteBoard(int boardNo, Board[] boards) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -15,7 +15,7 @@ public class Board {
 	}
 
 	public Board() {
-
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getBoardNo() {
@@ -54,5 +54,4 @@ public class Board {
 	public String toString() {
 		return "[게시번호=" + boardNo + ", 제목=" + title + ", 내용=" + contents + ", 작성자=" + writer + "]";
 	}
-
 }
