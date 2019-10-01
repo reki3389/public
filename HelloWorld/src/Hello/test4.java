@@ -1,18 +1,21 @@
 package Hello;
 
-import java.util.Scanner;
-
 public class test4 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		test5 mycom = new test5();
 		
-		int n = sc.nextInt();
-		int[] a = new int[n];
-		long sum = 0;
-		for(long i = 0; i <= a.length; i++) {
-			sum += (long) i;
-			
-		}System.out.println(sum);
+		int[] values1 = {1, 2, 3};
+		int result1 = mycom.sum1(values1);
+		System.out.println(result1);
+		
+		int result2 = mycom.sum1(new int[] {1,2,3});
+		System.out.println(result2);
+		
+		int result3 = mycom.sum2(1, 2, 3);
+		System.out.println(result3);
+		
+		int result4 = mycom.sum2(1, 2, 3, 4, 5);
+		System.out.println(result4);
 		
 	}
 }

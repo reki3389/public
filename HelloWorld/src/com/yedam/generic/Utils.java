@@ -1,11 +1,20 @@
 package com.yedam.generic;
 
 public class Utils {
-	public static <K, V> Pair<K, V> pairing(K k, V v) {
-		return null;	
-	}
-	public static <V extends Pair> int compare(V k1, V v1) {
-		int v1 = k1;
-		
+
+//	public static <K, V> V getValue(Pair<K, V> p, K k) {
+//		if(p.getKey() == k) {
+//			return p.getValue();
+//		}else {
+//			return null;
+//		}
+//	}
+
+	public static <P extends Pair<K, V>, K, V> V getValue(P p, K k) {
+		if (p.getKey() == k) {
+			return p.getValue();
+		} else {
+			return null;
+		}
 	}
 }

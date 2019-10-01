@@ -5,17 +5,11 @@ public class Pair<K, V> {
 	private V value;
 	
 	public Pair(K key, V value) {
-		super();
 		this.key = key;
-		this.value = value;
+		this.value = value; 
 	}
 
-	public K getKey() {
-		return key;
-	}
+	public K getKey() { return key; }
 
-
-	public V getValue() {
-		return value;
-	}
+	public V getValue() { return value; }
 }

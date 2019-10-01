@@ -51,15 +51,15 @@ public class AccountExample {
 		System.out.println("getAccountlist");
 		for (Account a : accountArray) {
 			if (a != null)
-				System.out.println("계좌번호 :" + a.getAno() + ", 소유자:" + a.getOwner() + ", 잔액:" + a.getBalance());
+				System.out.println("계좌번호 : " + a.getAno() + ", 소유자 : " + a.getOwner() + ", 잔액 : " + a.getBalance());
 		}
 	}
 
 	// 입금.
 	public static void deposit() {
-		System.out.print("계좌번호 입력: ");
+		System.out.print("계좌번호 입력 : ");
 		String accntNo = sc.nextLine();
-		System.out.print("입금액: ");
+		System.out.print("입금액 : ");
 		int accntBalance = sc.nextInt();
 		for (Account accnt : accountArray) {
 			if (accnt != null && accnt.getAno().contentEquals(accntNo)) {
@@ -70,9 +70,9 @@ public class AccountExample {
 
 	// 출금.
 	public static void withdraw() {
-		System.out.print("계좌번호 입력: ");
+		System.out.print("계좌번호 입력 : ");
 		String accntNo = sc.nextLine();
-		System.out.print("출금액: ");
+		System.out.print("출금액 : ");
 		int accntBalance = sc.nextInt();
 		for (Account accnt : accountArray) {
 			if (accnt != null && accnt.getAno().contentEquals(accntNo)) {
@@ -82,7 +82,7 @@ public class AccountExample {
 		}
 		for (Account a : accountArray) {
 			if (a != null)
-				System.out.println("현재 잔액:"+a.getBalance());
+				System.out.println("현재 잔액 : "+a.getBalance());
 		}
 	}
 

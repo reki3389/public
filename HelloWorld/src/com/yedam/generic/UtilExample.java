@@ -3,11 +3,11 @@ package com.yedam.generic;
 public class UtilExample {
 	public static void main(String[] args) {
 		Pair<String, Integer> Pair = new Pair<>("홍길동", 35);
-		Integer age = Util.getValue(pair, "홍길동");
+		Integer age = Utils.getValue(Pair, "홍길동");
 		System.out.println(age);
 		
 		ChildPair<String, Integer> ChildPair = new ChildPair<>("홍삼원", 20);
-		Integer ChildAge = Util.getValue(Childpair, 홍삼순);
+		Integer ChildAge = Utils.getValue(ChildPair, "홍삼순");
 		System.out.println(ChildAge);
 		
 		/*OtherPair<String, Integer> otherPair = new OtherPair<>("홍삼원", 20);
