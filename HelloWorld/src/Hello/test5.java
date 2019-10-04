@@ -1,20 +1,15 @@
 package Hello;
 
+import java.util.Scanner;
+
 public class test5 {
-	public int sum1(int[] values) {
-		int sum = 0;
-		for (int i = 0; i < values.length; i++) {
-			sum += values[i];
+	String name;
+	String id;
+	String password;
+	int age;
 
-		}
-		return sum;
-	}
-
-	int sum2(int... values) {
-		int sum = 0;
-		for (int i = 0; i < values.length; i++) {
-			sum += values[i];
-		}
-		return sum;
+	public test5(String name, String id) {
+		this.name = name;
+		this.id = id;
 	}
 }
