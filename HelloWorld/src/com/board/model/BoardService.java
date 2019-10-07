@@ -13,6 +13,5 @@ public interface BoardService {
 	// 삭제하기
 	public void deleteBoard(int boardNo, Board[] boards);
 
-	public void getBoardDelete(int boardNo, Board[] boardAry);
 
 }

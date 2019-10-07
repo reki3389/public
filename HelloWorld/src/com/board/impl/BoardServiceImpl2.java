@@ -1,4 +1,4 @@
-package com.board.imp1;
+package com.board.impl;
 
 import com.board.model.Board;
 import com.board.model.BoardService;
@@ -27,7 +27,7 @@ public abstract class BoardServiceImpl2 implements BoardService {
 	}
 
 	@Override
-	public void getBoardDelete(int boardNo, Board[] boards) {
+	public void deleteBoard(int boardNo, Board[] boards) {
 
 
 	}
